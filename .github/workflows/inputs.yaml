@@ -12,6 +12,9 @@ on:
           - staging
           - testing
           - production
+      artifact_tag:
+        description: Choose the Git Tag to Deploy
+        required: true
 jobs:
   input-parameter:
     runs-on: ubuntu-latest
