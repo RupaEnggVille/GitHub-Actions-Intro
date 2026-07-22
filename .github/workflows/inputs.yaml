@@ -1,0 +1,20 @@
+name: Parameterized Deploy Workflow
+on:
+  workflow_dispatch: 
+    inputs:
+      environment:
+        description: Choose the environment to deploy
+        required: true
+        default: development
+        type: choice
+        options:
+          - development
+          - staging
+          - testing
+          - production
+jobs:
+  input-parameter:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy the App
+        run: echo "Deploy the Application to ${{ inputs.environment }}"
