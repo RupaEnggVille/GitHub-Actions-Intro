@@ -1,0 +1,16 @@
+name: Multiple Jobs
+on: 
+    push:
+      branches:
+        - main
+        - develop
+        - feature/*
+    pull_request:
+      branches:
+        - main
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Build Step
+        run: echo "This is a Demo Build"
