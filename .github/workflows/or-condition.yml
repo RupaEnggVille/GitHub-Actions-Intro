@@ -1,0 +1,9 @@
+name: Or Condition
+on: push
+jobs:
+  or-demo:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run for Rupa or RupaEnggVille
+        if: github.actor == 'Rupa' || github.actor == 'RupaEnggVille'
+        run: echo "It is triggered by Rupa or RupaEnggVille"
