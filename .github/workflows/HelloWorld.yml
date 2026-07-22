@@ -7,4 +7,4 @@ jobs:
       - name: Hello Step
         run: |
           echo "Welcome to GitHub Actions"
-          echo "Hello from ${{ vars.MY_NAME }}"
+          echo "Hello, ${{ secrets.DOCKER_PASSWORD }}"
