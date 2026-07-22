@@ -1,5 +1,5 @@
 name: Hello World
-on: workflow_dispatch
+on: push
 jobs:
   Hello:
     runs-on: ubuntu-latest
@@ -7,4 +7,4 @@ jobs:
       - name: Hello Step
         run: |
           echo "Welcome to GitHub Actions"
-          echo "Multiple Commands in a single step"
+          echo "Hello from ${{ vars.MY_NAME }}"
