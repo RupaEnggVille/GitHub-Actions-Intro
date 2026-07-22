@@ -1,9 +1,7 @@
 name: If Condition
 on:
-  push:
-    branches:
-      - main
-      - develop
+  workflow_dispatch: 
+    
 jobs:
   demo:
     runs-on: ubuntu-latest
